@@ -1,0 +1,31 @@
+{
+  "version": "0.1.0",
+  "name": "RPNCalculator",
+  "description": "A Reverse Polish Notation calculator written in Node",
+  "author": "Evan Waters",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/evro/RPNCalculator.git"
+  },
+  "directories": {
+    "lib": "./lib",
+    "bin": "./bin"
+  },
+  "main": "index.js",
+  "bin": {
+    "rpn-calculator": "./bin/rpn-calculator.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "~1.15.1",
+    "should": "~2.1.1"
+  },
+  "scripts": {
+    "start": "./bin/rpn-calculator.js",
+    "test": "make test"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.6"
+  }
+}
