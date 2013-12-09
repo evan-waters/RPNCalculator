@@ -13,7 +13,7 @@ Install dependencies
 
 Run the app
 
-  $ npm start
+  `$ npm start`
 
 or
 
