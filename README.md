@@ -9,7 +9,7 @@ Requires Node >= 0.6
 
 Install dependencies
   
-  $ npm install
+  `$ npm install`
 
 Run the app
 
@@ -17,12 +17,14 @@ Run the app
 
 or
 
-  $ node ./bin/rpncalculator.js
+  `$ node ./bin/rpncalculator.js`
 
 ## Testing
 
-  $ npm test
+Run tests using
+
+  `$ npm test`
 
 or
 
-  $ make test
+  `$ make test`
