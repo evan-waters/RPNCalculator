@@ -38,7 +38,7 @@ describe('rpncalculator', function() {
         };
 
         rpncalculator.calculate([], test);
-        rpncalculator.calculate([1],test);
+        rpncalculator.calculate([1], test);
         rpncalculator.calculate([1,'+'], test);
       });
     });
