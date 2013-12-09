@@ -11,6 +11,7 @@ describe('rpncalculator', function() {
       it('should return an error', function(done) {
         rpncalculator.calculate(['4-'], function(err, result) {
           should.exist(err);
+          should.equal(err.message, "Operator is Invalid.");
           should.not.exist(result);
           done();
         });
@@ -19,8 +20,10 @@ describe('rpncalculator', function() {
 
     describe('with too few arguments', function() {
       it('should return false', function(done) {
+        // Number of expected tests
         var expected = 3;
 
+        // Only call done() when all tests have completed
         function checkDone() {
           expected--;
           if (expected === 0) {
@@ -37,6 +40,16 @@ describe('rpncalculator', function() {
         rpncalculator.calculate([], test);
         rpncalculator.calculate([1],test);
         rpncalculator.calculate([1,2], test);
+      });
+    });
+
+    describe('with no operators', function() {
+      it('should return false', function(done) {
+        rpncalculator.calculate([1,2,3,4,5], function(err, result) {
+          should.not.exist(err);
+          result.should.be.false;
+          done();
+        });
       });
     });
   });
