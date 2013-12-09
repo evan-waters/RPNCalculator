@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+'use strict';
+
 var rpnCalculator = require('..')
   , util = require('util')
   , inputArgs = [];
