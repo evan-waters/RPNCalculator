@@ -39,7 +39,7 @@ describe('rpncalculator', function() {
 
         rpncalculator.calculate([], test);
         rpncalculator.calculate([1],test);
-        rpncalculator.calculate([1,2], test);
+        rpncalculator.calculate([1,'+'], test);
       });
     });
 
@@ -52,5 +52,26 @@ describe('rpncalculator', function() {
         });
       });
     });
+
+    describe('with incorrectly formatted statement', function() {
+      it('should return an error', function(done) {
+        rpncalculator.calculate([1,'+',1], function(err, result) {
+          should.exist(err);
+          should.equal(err.message, "Statement is Invalid.");
+          should.not.exist(result);
+          done();
+        });
+      });
+    });
+
+    // describe('with correctly formatted statement', function() {
+    //   it('should return a number', function(done) {
+    //     rpncalculator.calculate([1,1,'+'], function(err, result) {
+    //       should.not.exist(err);
+    //       result.should.be.a.Number;
+    //       done();
+    //     })
+    //   });
+    // });
   });
 });
