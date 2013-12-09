@@ -64,14 +64,14 @@ describe('rpncalculator', function() {
       });
     });
 
-    // describe('with correctly formatted statement', function() {
-    //   it('should return a number', function(done) {
-    //     rpncalculator.calculate([1,1,'+'], function(err, result) {
-    //       should.not.exist(err);
-    //       result.should.be.a.Number;
-    //       done();
-    //     })
-    //   });
-    // });
+    describe('with correctly formatted statement', function() {
+      it('should return a number', function(done) {
+        rpncalculator.calculate([1,1,'+'], function(err, result) {
+          should.not.exist(err);
+          result.should.be.a.Number;
+          done();
+        })
+      });
+    });
   });
 });
