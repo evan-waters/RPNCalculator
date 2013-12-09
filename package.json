@@ -18,10 +18,11 @@
   "dependencies": {},
   "devDependencies": {
     "mocha": "~1.15.1",
-    "should": "~2.1.1"
+    "should": "~2.1.1",
+    "underscore": "~1.5.2"
   },
   "scripts": {
-    "start": "./bin/rpn-calculator.js",
+    "start": "node ./bin/rpncalculator.js",
     "test": "make test"
   },
   "license": "MIT",
